@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Kitty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+    </style>
+</head>
+<div class="2x:container mx-auto bg-black p-8">
+    <center><h1  class="text-[#ffffff] font-[Monoton] text-[34px]"> SHINY KITTY</h1></center>
+    <div class="w-[90%] mx-auto flex flex-col justify-center items-center">
+        <img id="bulb" src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" class="h-[200px]" alt="">
+        <img  id="cat"src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" class="h-[200px]" alt=""> 
+    </div>
+    <div class="w-[200px] mx-auto bg-slate-200  shadow-[0_0_10px_yellow]  p-3 m-7 flex flex-col justify-center items-center gap-5 rounded-sm shadow-white-xl  " >
+        <p id="para" class="text-[#000000] font-bold ">SWITCH ON</p> 
+        <div class="flex flex-row justify-center items-center gap-5">
+            <button id="btn1" class="bg-[#87e387] p-2 font-bold hover:shadow-[0_0_10px_#55e755] transition-shadow duration-50 rounded-sm border: border-2 border-solid  border-[#2ff128]">ON</button>
+            <button id="btn2"  class="bg-[#fd7c7c] p-2 font-bold rounded-sm hover:shadow-[0_0_10px_#f12828] transition-shadow duration-50  border: border-2 border-solid  border-[#f12828]">OFF</button> 
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * create selection for all the tags
+     **/
+
+   const btn1 = document.getElementById("btn1")
+   const btn2 = document.getElementById("btn2")
+   const para = document.getElementById("para")
+   const cat = document.getElementById("cat")
+   const bulb = document.getElementById("bulb")
+     /**
+     * create events for selectin for all the tags along with properties
+     **/
+
+   btn1.addEventListener("click", () => {
+       console.log("ON Button Clicked")
+       
+       cat.src ="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+       bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png"
+       para.textContent="SWITCH ON"   
+   })
+
+  
+   btn2.addEventListener("click", () => {
+       console.log("OFF Button Clicked")
+       bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+       cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+       para.textContent="SWITCH OFF" 
+   })
+
+   
+
+   
+</script>
+
+ 
+</body>
+</html>
